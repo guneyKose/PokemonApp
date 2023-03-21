@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="86" id="KGk-i7-Jjw" customClass="PokemonTableViewCell" customModule="Pokemon" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="307" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="307" height="86"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleAspectFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7D8-hI-vl6">
+                        <rect key="frame" x="32" y="10" width="243" height="70"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLF-A8-TLp">
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="SFS-sk-wsl">
+                                        <rect key="frame" x="16.666666666666664" y="16.666666666666671" width="37" height="37"/>
+                                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WwM-x5-7WX">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="WwM-x5-7WX" secondAttribute="bottom" id="9M1-IJ-eGb"/>
+                                    <constraint firstItem="SFS-sk-wsl" firstAttribute="centerX" secondItem="TLF-A8-TLp" secondAttribute="centerX" id="9uM-kM-qli"/>
+                                    <constraint firstItem="SFS-sk-wsl" firstAttribute="centerY" secondItem="TLF-A8-TLp" secondAttribute="centerY" id="Bf1-LV-9HC"/>
+                                    <constraint firstAttribute="trailing" secondItem="WwM-x5-7WX" secondAttribute="trailing" id="Jj0-j9-nxr"/>
+                                    <constraint firstAttribute="height" constant="70" id="jBw-sl-mDR"/>
+                                    <constraint firstItem="WwM-x5-7WX" firstAttribute="leading" secondItem="TLF-A8-TLp" secondAttribute="leading" id="nzv-Yv-gtp"/>
+                                    <constraint firstAttribute="width" constant="70" id="pYv-Fs-zak"/>
+                                    <constraint firstItem="WwM-x5-7WX" firstAttribute="top" secondItem="TLF-A8-TLp" secondAttribute="top" id="wQO-lu-zL4"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWr-Uv-cxs">
+                                <rect key="frame" x="70" y="25" width="173" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="7D8-hI-vl6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="4rE-yr-Yzl"/>
+                    <constraint firstItem="7D8-hI-vl6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="enW-cH-BBk"/>
+                    <constraint firstAttribute="bottom" secondItem="7D8-hI-vl6" secondAttribute="bottom" constant="10" id="mdC-vM-qzR"/>
+                    <constraint firstAttribute="trailing" secondItem="7D8-hI-vl6" secondAttribute="trailing" constant="32" id="yN5-Cs-giE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="activityIndicator" destination="SFS-sk-wsl" id="bIa-iS-0Zg"/>
+                <outlet property="pokemonImage" destination="WwM-x5-7WX" id="LXi-TB-eW3"/>
+                <outlet property="pokemonNameLabel" destination="qWr-Uv-cxs" id="Sjd-Hi-tot"/>
+            </connections>
+            <point key="canvasLocation" x="52.671755725190835" y="-58.450704225352112"/>
+        </tableViewCell>
+    </objects>
+</document>
