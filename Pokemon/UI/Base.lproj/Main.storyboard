@@ -21,18 +21,24 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Ibu-2e-9L4">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Ibu-2e-9L4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0tz-9C-lUb"/>
                             <constraint firstItem="iss-Ve-LBd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5W6-44-z01"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iss-Ve-LBd" secondAttribute="trailing" id="Jm0-OH-PNh"/>
+                            <constraint firstItem="Ibu-2e-9L4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dh0-Ri-b4w"/>
                             <constraint firstItem="iss-Ve-LBd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="du5-NJ-33s"/>
                             <constraint firstAttribute="bottom" secondItem="iss-Ve-LBd" secondAttribute="bottom" id="yzk-ZW-wHz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bgn-9G-ZRn"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Ibu-2e-9L4" id="ijW-vq-MKW"/>
                         <outlet property="pokemonTableView" destination="iss-Ve-LBd" id="Z2A-HV-rbg"/>
                         <segue destination="4dI-Iw-cdv" kind="show" identifier="toPokemonDetail" id="x7r-oZ-PfU"/>
                     </connections>

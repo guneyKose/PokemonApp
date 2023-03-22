@@ -15,8 +15,8 @@ class PokemonTableViewCell: UITableViewCell {
         
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.activityIndicator.stopAnimating()
-        self.activityIndicator.isHidden = true
+        self.activityIndicator.startAnimating()
+        self.activityIndicator.isHidden = false
     }
     
     func setCell(pokemon: Pokemon) {
@@ -28,9 +28,10 @@ class PokemonTableViewCell: UITableViewCell {
             self.activityIndicator.color = UIColor.label
             
             if let imageString = pokemon.image, let url = URL(string: imageString) {
-                self.pokemonImage.load(url: url)
-                self.activityIndicator.stopAnimating()
-                self.activityIndicator.isHidden = true
+                self.pokemonImage.load(url: url) {
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.isHidden = true
+                }
             } else {
                 self.activityIndicator.startAnimating()
                 self.activityIndicator.isHidden = false

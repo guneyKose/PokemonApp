@@ -15,6 +15,9 @@
             <rect key="frame" x="0.0" y="0.0" width="445" height="255"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="5kw-Ev-UCX">
+                    <rect key="frame" x="212.66666666666666" y="117.66666666666667" width="20" height="20.000000000000014"/>
+                </activityIndicatorView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xoX-NG-He8">
                     <rect key="frame" x="32" y="0.0" width="381" height="245"/>
                     <subviews>
@@ -45,10 +48,13 @@
                 <constraint firstAttribute="bottom" secondItem="xoX-NG-He8" secondAttribute="bottom" constant="10" id="3Ov-jc-9M6"/>
                 <constraint firstItem="xoX-NG-He8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="8Y0-aB-bRv"/>
                 <constraint firstItem="xoX-NG-He8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="czn-yV-rw8"/>
+                <constraint firstItem="5kw-Ev-UCX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="qPp-RC-LkZ"/>
+                <constraint firstItem="5kw-Ev-UCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xuy-ZN-9wa"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xoX-NG-He8" secondAttribute="trailing" constant="32" id="yXC-Qg-gdh"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="activityIndicator" destination="5kw-Ev-UCX" id="JaT-25-4PI"/>
                 <outlet property="pokemonImage" destination="ihJ-XX-43j" id="eKw-U6-gB2"/>
             </connections>
             <point key="canvasLocation" x="16.030534351145036" y="-166.5492957746479"/>

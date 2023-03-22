@@ -14,12 +14,15 @@ class PokemonViewController: UIViewController {
             self.setTableView()
         }
     }
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let viewModel = PokemonViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = viewModel.title
+        self.activityIndicator.startAnimating()
+        self.activityIndicator.isHidden = false
         self.viewModel.fetchPokemon { success in //Fetch the first page.
             if success {
                 self.viewModel.fetchPokemon(next: true) { success in //Fetch the next page.
@@ -38,9 +41,11 @@ class PokemonViewController: UIViewController {
     }
     
     private func reloadTable() {
-        DispatchQueue.main.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
             self.pokemonTableView.reloadData()
-        }
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
+        })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
